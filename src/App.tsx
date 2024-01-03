@@ -28,7 +28,25 @@ const OsintH1 = styled.h1`
 `;
 
 const PageBanner = styled.div`
-  background-image: linear-gradient(to bottom, #000000, #1a084d);
+  background-image: linear-gradient(
+    to bottom,
+    #000000,
+    #1a084d,
+    #7314e9ff,
+    #000000,
+    #000000
+  );
+
+  @media (max-width: 768px) {
+    background-image: linear-gradient(
+      to bottom,
+      #000000,
+      #1a084d,
+      #000000,
+      #000000,
+      #000000
+    );
+  }
 `;
 
 function App() {
@@ -36,65 +54,67 @@ function App() {
     <>
       <Header></Header>
 
-      {/* PAGE BANNER SECTION */}
-      <PageBanner
-        className={classnames(
-          "min-h-[110vh]  lg:py-0 py-32 flex flex-col lg:flex-row justify-between items-center relative",
-        )}
-      >
-        <div className="w-full md:w-auto xl:pl-[5rem] xl:pr-0 lg:pl-[3rem] lg:pr-0 px-[1rem] lg:mb-0 mb-12">
-          <OsintH1 className="w-full text-white md:text-6xl  sm:text-5xl text-4xl font-extrabold mb-5 ">
-            <GradientText>Supercharge</GradientText> your searches{" "}
-            <br className="hidden lg:block" /> with OSINT Industries
-          </OsintH1>
-          <p className="lg:mb-5 mb-10 text-white xl:text-xl lg:text-lg text-[1rem]">
-            The world's best OSINT platform to give you detailed information
-            from over 200+ websites.
-          </p>
+      <PageBanner>
+        {/* PAGE BANNER SECTION */}
+        <div
+          className={classnames(
+            "min-h-[110vh]  lg:py-0 py-32 flex flex-col lg:flex-row justify-between items-center relative",
+          )}
+        >
+          <div className="w-full md:w-auto xl:pl-[5rem] xl:pr-0 lg:pl-[3rem] lg:pr-0 px-[1rem] lg:mb-0 mb-12">
+            <OsintH1 className="w-full text-white md:text-6xl  sm:text-5xl text-4xl font-extrabold mb-5 ">
+              <GradientText>Supercharge</GradientText> your searches{" "}
+              <br className="hidden lg:block" /> with OSINT Industries
+            </OsintH1>
+            <p className="lg:mb-5 mb-10 text-white xl:text-xl lg:text-lg text-[1rem]">
+              The world's best OSINT platform to give you detailed information
+              from over 200+ websites.
+            </p>
 
-          <div className="flex flex-row justify-start mb-10">
-            <Button label={"Get started"} className="mr-5"></Button>
-            <Button
-              label={"Learn more"}
-              variant={ButtonVariants.Transparent}
-              icon={<ArrowRightIcon width={20} height={20}></ArrowRightIcon>}
-            ></Button>
+            <div className="flex flex-row justify-start mb-10">
+              <Button label={"Get started"} className="mr-5"></Button>
+              <Button
+                label={"Learn more"}
+                variant={ButtonVariants.Transparent}
+                icon={<ArrowRightIcon width={20} height={20}></ArrowRightIcon>}
+              ></Button>
+            </div>
+
+            <div className="flex justify-start text-white items-center">
+              <img
+                src="/icons/icon-rating.svg"
+                alt="Osint Rating"
+                className="mr-2"
+              />
+              <img
+                src="/icons/icon-reg-spin.svg"
+                alt="Osint Spin"
+                className="mr-2"
+              />
+              <p>5 Star Rating</p>
+            </div>
           </div>
-
-          <div className="flex justify-start text-white items-center">
-            <img
-              src="/icons/icon-rating.svg"
-              alt="Osint Rating"
-              className="mr-2"
-            />
-            <img
-              src="/icons/icon-reg-spin.svg"
-              alt="Osint Spin"
-              className="mr-2"
-            />
-            <p>5 Star Rating</p>
+          <div className="">
+            <img src="/images/world-map.svg" alt="World map" />
           </div>
         </div>
-        <div className="">
-          <img src="/images/world-map.svg" alt="World map" />
-        </div>
+
+        {/* WHAT WE OFFER SECTION */}
+        <Container className="mt-32 mb-52">
+          <div className="grid md:grid-cols-3  sm:grid-cols-2 grid-cols-1 lg:gap-x-10 gap-x-2 gap-y-14 lg:px-10 px-2 ">
+            {offers.map((offer, index) => {
+              return (
+                <OfferCard
+                  key={index}
+                  icon={offer.icon}
+                  title={offer.title}
+                  description={offer.description}
+                ></OfferCard>
+              );
+            })}
+          </div>
+        </Container>
       </PageBanner>
-
-      {/* WHAT WE OFFER SECTION */}
-      <Container className="mt-32 mb-52">
-        <div className="grid md:grid-cols-3  sm:grid-cols-2 grid-cols-1 lg:gap-x-10 gap-x-2 gap-y-14 lg:px-10 px-2 ">
-          {offers.map((offer, index) => {
-            return (
-              <OfferCard
-                key={index}
-                icon={offer.icon}
-                title={offer.title}
-                description={offer.description}
-              ></OfferCard>
-            );
-          })}
-        </div>
-      </Container>
 
       {/* EFFORTLESS INTELLIGENCE */}
       <Container className="mt-32 mb-52">
