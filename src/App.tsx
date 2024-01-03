@@ -27,15 +27,19 @@ const OsintH1 = styled.h1`
   }
 `;
 
+const PageBanner = styled.div`
+  background-image: linear-gradient(to bottom, #000000, #1a084d);
+`;
+
 function App() {
   return (
     <>
       <Header></Header>
 
       {/* PAGE BANNER SECTION */}
-      <div
+      <PageBanner
         className={classnames(
-          "min-h-[110vh]  lg:py-0 py-32 bg-[#1a084d] flex flex-col lg:flex-row justify-between items-center relative",
+          "min-h-[110vh]  lg:py-0 py-32 flex flex-col lg:flex-row justify-between items-center relative",
         )}
       >
         <div className="w-full md:w-auto xl:pl-[5rem] xl:pr-0 lg:pl-[3rem] lg:pr-0 px-[1rem] lg:mb-0 mb-12">
@@ -74,7 +78,7 @@ function App() {
         <div className="">
           <img src="/images/world-map.svg" alt="World map" />
         </div>
-      </div>
+      </PageBanner>
 
       {/* WHAT WE OFFER SECTION */}
       <Container className="mt-32 mb-52">
