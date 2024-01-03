@@ -27,7 +27,7 @@ export const Header = () => {
 
   return (
     <Container
-      className={`transition-colors h-[10vh] flex justify-between items-center fixed top-0 z-20 w-full left-0 ${
+      className={`transition-colors h-[7vh] md:h-[10vh] flex justify-between items-center fixed top-0 z-20 w-full left-0 ${
         scrolled ? "bg-white" : "bg-transparent"
       }`}
     >
