@@ -31,7 +31,8 @@ const PageBanner = styled.div`
   background-image: linear-gradient(
     to bottom,
     #000000,
-    #1a084d,
+    #180748,
+    #221156ff,
     #7314e9ff,
     #000000,
     #000000
@@ -42,6 +43,7 @@ const PageBanner = styled.div`
       to bottom,
       #000000,
       #1a084d,
+      #221156ff,
       #000000,
       #000000,
       #000000
