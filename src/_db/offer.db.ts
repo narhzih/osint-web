@@ -42,12 +42,12 @@ export const efforts = [
     icon: "icon-chart.svg",
     title: "Receive real-time intelligence",
     description:
-      "Enter a phone or email to initiate. Our platform rapidly connects to numerous data sources..",
+      "Access immediate insights, including profiles, photos, links, and more, for a complete digital picture",
   },
   {
     icon: "icon-analyze.svg",
     title: "Analyze and export data",
     description:
-      "Enter a phone or email to initiate. Our platform rapidly connects to numerous data sources..",
+      "Examine data closely and export in your preferred format: JSON, CSV, or PDF..",
   },
 ];
