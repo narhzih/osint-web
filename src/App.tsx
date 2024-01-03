@@ -33,7 +33,7 @@ const PageBanner = styled.div`
     #000000,
     #180748,
     #221156ff,
-    #7314e9ff,
+    hsl(267, 84%, 10%),
     #000000,
     #000000
   );
@@ -43,7 +43,7 @@ const PageBanner = styled.div`
       to bottom,
       #000000,
       #1a084d,
-      #221156ff,
+      hsl(255, 80%, 20%),
       #000000,
       #000000,
       #000000
