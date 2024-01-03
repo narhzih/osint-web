@@ -4,8 +4,18 @@
 @tailwind utilities;
 
 @layer base {
+    *,
+    *::after,
+    *::before,
+    body{
+        padding: 0;
+        margin: 0;
+    }
     html {
         font-family: 'Poppins', sans-serif;
+        background-color: black;
+        padding: 0;
+        margin: 0;
     }
 }
 

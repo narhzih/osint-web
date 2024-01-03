@@ -1,9 +1,9 @@
 import React from "react";
-import styled from "styled-components";
+import classnames from "classnames";
 
-const ContainerWrapper = styled.div`
-  padding: 0 2rem 0 2rem;
-`;
+export const PAGE_WIDE_PADDING_X = "xl:px-[5rem] lg:px-[3rem] px-[1rem]";
+export const PAGE_WIDE_PADDING_L = "xl:pl-[5rem] lg:px-[3rem]";
+export const PAGE_WIDE_PADDING_R = "xl:pr-[5rem] lg:pr-[3rem]";
 
 export const Container = ({
   className,
@@ -12,5 +12,7 @@ export const Container = ({
   className?: string;
   children?: React.ReactNode;
 }) => {
-  return <ContainerWrapper className={className}>{children}</ContainerWrapper>;
+  return (
+    <div className={classnames(PAGE_WIDE_PADDING_X, className)}>{children}</div>
+  );
 };
